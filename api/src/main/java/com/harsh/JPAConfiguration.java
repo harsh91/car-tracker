@@ -1,3 +1,5 @@
+package com.harsh;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -23,6 +25,7 @@ public class JPAConfiguration {
         LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
         emf.setDataSource(getDataSource());
         emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        emf.setPackagesToScan("com.harsh.com.harsh.entity");
 
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");

@@ -1,3 +1,5 @@
+package com.harsh;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -5,7 +7,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  */
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{Application.class};
+        return new Class[]{Application.class, JPAConfiguration.class};
     }
 
     protected Class<?>[] getServletConfigClasses() {
