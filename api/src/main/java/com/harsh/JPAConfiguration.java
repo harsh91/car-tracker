@@ -25,7 +25,7 @@ public class JPAConfiguration {
         LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
         emf.setDataSource(getDataSource());
         emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        emf.setPackagesToScan("com.harsh.com.harsh.entity");
+        emf.setPackagesToScan("com.harsh.entity");
 
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
@@ -40,7 +40,7 @@ public class JPAConfiguration {
     public DataSource getDataSource() {
         DriverManagerDataSource driver = new DriverManagerDataSource();
         driver.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        driver.setUrl("jdbc:mysql://localhost/car_tracker_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+        driver.setUrl("jdbc:mysql://localhost/cartracker_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
         driver.setUsername("root");
         driver.setPassword("root");
         return driver;
